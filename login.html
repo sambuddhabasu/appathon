@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+    <title>HungryMe</title>
+
+ 	<link rel="stylesheet" href="static/css/jquery.mobile-1.1.0.min.css" />
+	<link rel="stylesheet" href="static/css/index.css" />
+	<link rel="stylesheet" href="static/css/login.css" />
+
+    <script src="static/js/jquery.mobile/jquery-1.7.2.min"></script>
+	<script src="static/js/index.js"></script>
+	<script src="static/js/login.js"></script>
+</head>
+<body>
+	<div id="header"></div>
+	<div id="container">
+		<br />
+		<p>LogIn</p>
+		<br />
+		<label>Username</label><br />
+		<input type="text" name="username" id="username" /><br />
+		<label>Password</label><br />
+		<input type="password" name="password" id="password" /><br />
+		<button name="submit_login" id="submit_login" onclick="login();">LogIn</button><br />
+		<span id="error_message"></span>
+	</div>
+</body>
+</html>
