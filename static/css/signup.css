@@ -1,0 +1,8 @@
+input {
+	font-size: 50%;
+	padding: 2%;
+}
+#error_message {
+	font-size: 50%;
+	color: red;
+}

@@ -1,14 +1,8 @@
 <?php
-	$host = "sql311.byethost17.com";
-	$username = "b17_14246960";
-	$password = "pmw123";
-	$database = "b17_14246960_pmw";
-	$con=mysqli_connect($host, $username, $password, $database);
-	//Check for error
-	if (mysqli_connect_errno()) {
-		echo "Failed to connect to MySQL: " . mysqli_connect_error();
-	}
-	else {
-		echo "Done!";
-	}
+$db_host = "mysql13.000webhost.com";
+$db_name = "a9328282_user";
+$db_username = "a9328282_user";
+$db_password = "pmw12345";
+mysql_connect("$db_host","$db_username","$db_password") or die ("could not connect to database");
+mysql_select_db("$db_name") or die ("no database");
 ?>

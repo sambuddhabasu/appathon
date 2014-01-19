@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hungry Me</title>
+		<link href='http://fonts.googleapis.com/css?family=Exo+2:400,100' rel='stylesheet' type='text/css'>
+		<meta name="viewport" content="width=800, user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="static/css/header.css">
+		<link rel="stylesheet" type="text/css" href="static/css/profile.css"> <!--NEEDED-->
+		<link rel="stylesheet" type="text/css" href="static/css/stroll.css"> <!--NEEDED-->
+		<script src="static/js/meny.min.js"></script> <!--NEEDED--> <!--DO NOT TOUCH. I SPENT TOO MUCH TIME MAKING MENY WORK AT THIS SCRIPT-->
+		<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+		<script src="static/js/index.js"></script>
+		<script src="static/js/common.js"></script>
+		<!--script src="static/js/profile.js"></script-->
+		<script src="static/js/postrecipe.js"></script>
+		<script src="static/js/leaderboard.js"></script>
+		<style>
+			button {
+				background-color: #fff;
+				border: 1px solid #fff;
+				padding: 2%;
+				margin: 1%;
+				color: #02779E;
+				font-size: 120%;
+				width: 30%;
+			}
+			table {
+				margin-left: 10%;
+			}
+			td {
+				padding: 2%;
+				text-align: center;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="header"></div>
+		<div class="meny"> <!--NEEDED-->
+			<p style="font-size: 200%;">HungryMe</p>
+			<ul>
+				<li onClick="myprofile();">My Profile</li> <!--NEEDED-->
+				<li onClick="searchrecipe();">Search Recipes</li> <!--NEEDED-->
+				<li onClick="postrecipe();">Post Recipe</li> <!--NEEDED-->
+				<li onClick="leaderboard();">Leaderboard</li> <!--NEEDED-->
+				<li onClick="logout();">LogOut</li> <!--NEEDED-->
+			</ul>
+		</div>
+
+		<div class="meny-arrow"></div> <!--NEEDED--> <!--JUST ARROW-->
+
+		<div class="contents"> <!--NEEDED--> <!--CONTENTS CLASS WHICH IS MOVED RIGHT ON MENY--> 
+			<h1>Leaderboard</h1><br />
+			<span id="leaderboard_container"></span>
+		</div>
+				
+		<script> <!--NEEDED--> <!--VOODOO MAGIC STUFF.-->
+			// Create an instance of Meny
+			var meny = Meny.create({
+				// The element that will be animated in from off screen
+				menuElement: document.querySelector( '.meny' ),
+
+				// The contents that gets pushed aside while Meny is active
+				contentsElement: document.querySelector( '.contents' ),
+
+				// [optional] The alignment of the menu (top/right/bottom/left)
+				position: Meny.getQuery().p || 'left', 
+
+				// [optional] The height of the menu (when using top/bottom position)
+				height: 200,
+
+				// [optional] The width of the menu (when using left/right position)
+				width: 260,
+
+				// [optional] Distance from mouse (in pixels) when menu should open
+				threshold: 40,
+
+				// [optional] Use mouse movement to automatically open/close
+				mouse: true,
+
+				// [optional] Use touch swipe events to open/close
+				touch: true
+			});
+
+			if( Meny.getQuery().u && Meny.getQuery().u.match( /^http/gi ) ) {
+				var contents = document.querySelector( '.contents' );
+				contents.style.padding = '5%';
+				contents.innerHTML = '<div class="cover"></div><iframe src="'+ Meny.getQuery().u +'" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
+			}
+		</script>
+	</body>
+</html>

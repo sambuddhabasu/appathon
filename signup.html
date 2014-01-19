@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+    <title>HungryMe</title>
+
+ 	<link rel="stylesheet" href="static/css/jquery.mobile-1.1.0.min.css" />
+	<link rel="stylesheet" href="static/css/index.css" />
+	<link rel="stylesheet" href="static/css/signup.css" />
+	<script type="text/javascript" src="static/js/phonegap.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+	<script src="static/js/index.js"></script>
+	<script src="static/js/signup.js"></script>
+</head>
+<body>
+	<div id="header"></div>
+	<div id="container">
+		<br />
+		<p>SignUp</p>
+		<span id="error_message"></span><br />
+		<label>First Name</label><br />
+		<input type="text" name="first_name" id="first_name" /><br />
+		<label>Last Name</label><br />
+		<input type="text" name="last_name" id="last_name" /><br />
+		<label>Gender</label><br />
+		<input type="radio" name="sex" value="0" checked="checked" /><span style="font-size: 60%;">&nbsp;Male</span>
+		<input type="radio" name="sex" value="1" /><span style="font-size: 60%;">&nbsp;Female</span><br />
+		<label>Diet</label><br />
+		<input type="radio" name="diet" value="0" checked="checked" /><span style="font-size: 60%;">&nbsp;Veg</span>
+		<input type="radio" name="diet" value="1" /><span style="font-size: 60%;">&nbsp;Non-veg</span><br />
+		<label>Email</label><br />
+		<input type="email" name="email" id="email" /><br />
+		<label>Username</label><br />
+		<input type="text" name="username" id="username" /><br />
+		<label>Password</label><br />
+		<input type="password" name="password" id="password" /><br />
+		<label>Verify Password</label><br />
+		<input type="password" name="verify_password" id="verify_password" /><br />
+		<button name="submit_signup" id="submit_signup" onclick="signup();">SignUp</button><br />
+	</div>
+</body>
+</html>
